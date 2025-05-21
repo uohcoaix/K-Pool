@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-hidden">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,20 +7,26 @@
   <title>KPoll</title>
 </head>
 
-<body>
+<body class="overflow-hidden m-0 p-0">
   <div data-tauri-drag-region
-    class="bg-[#f2f4f7] dark:bg-[#1e1e2f] h-[30px] flex justify-end t-0 b-0 left-0 right-0">
-    <div class="titlebar-button" id="titlebar-minimize">
-      <img src="https://api.iconify.design/mdi:window-minimize.svg" alt="minimize" />
+    class="bg-[#f2f4f7] dark:bg-[#1e1e2f] h-[30px] flex  t-0 b-0 left-0 right-0 w-full">
+    <div class="h-full flex-grow-1 flex flex-row items-center" data-tauri-drag-region>
+      <img src="src/assets/icons/logo.svg" class="h-[20px] w-[20px] ml-2 mr-2" />
+      <div class="text-[#cfd5de] dark:text-[#ffffff] text-[12px] font-medium">KPoll</div>
     </div>
-    <div class="titlebar-button" id="titlebar-maximize">
-      <img src="https://api.iconify.design/mdi:window-maximize.svg" alt="maximize" />
-    </div>
-    <div class="titlebar-button" id="titlebar-close">
-      <img src="https://api.iconify.design/mdi:close.svg" alt="close" />
+    <div class="h-full flex flex-row justify-end items-center">
+      <div class="titlebar-button" id="titlebar-minimize">
+        <img src="titlebar/mdi_window-minimize.svg" />
+      </div>
+      <div class="titlebar-button" id="titlebar-maximize">
+        <img src="titlebar/mdi_window-maximize.svg" />
+      </div>
+      <div class="titlebar-button" id="titlebar-close">
+        <img src="titlebar/mdi_close.svg" />
+        </div>
     </div>
   </div>
-  <div id="app" class="bg-[#f2f4f7] dark:bg-[#1e1e2f] top-0"></div>
+  <div id="app" class="bg-[#f2f4f7] dark:bg-[#1e1e2f] top-0 overflow-hidden"></div>
   <script type="module" src="/src/main.js"></script>
 </body>
 
@@ -38,5 +44,11 @@
 
   .titlebar-button:hover {
     background: #5bbec3;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 </style>

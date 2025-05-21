@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main class="container h-screen w-screen">
+  <main class="h-screen w-full overflow-hidden">
     <router-view />
   </main>
 </template>

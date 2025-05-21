@@ -35,7 +35,10 @@
         "esModuleInterop": true
     },
     "include": [
-        "src/**/*",
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.js",
+        "src/**/*.vue",
         "scripts/**/*",
         "*.d.ts",
     ],
