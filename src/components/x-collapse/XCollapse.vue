@@ -18,15 +18,14 @@
       >
         <ArrowDropDownRound />
       </n-icon>
-    </div>
-    <transition
+    </div>    <transition
       name="collapse-transition"
       @enter="onEnter"
       @after-enter="onAfterEnter"
       @before-leave="onBeforeLeave"
       @leave="onLeave"
     >
-      <div v-show="isExpanded" class="overflow-hidden">
+      <div v-if="isExpanded" class="overflow-hidden">
         <slot></slot>
       </div>
     </transition>
@@ -57,7 +56,6 @@ const toggleCollapse = () => {
 
 // 动画相关的处理函数
 const onEnter = (el) => {
-	// 进入过渡开始
 	el.style.height = "0";
 	el.style.opacity = "0";
 	nextTick(() => {
@@ -67,19 +65,16 @@ const onEnter = (el) => {
 };
 
 const onAfterEnter = (el) => {
-	// 进入过渡结束
 	el.style.height = "";
 	el.style.opacity = "";
 };
 
 const onBeforeLeave = (el) => {
-	// 离开过渡开始前
 	el.style.height = el.scrollHeight + "px";
 	el.style.opacity = "1";
 };
 
 const onLeave = (el) => {
-	// 离开过渡进行中
 	el.style.height = "0";
 	el.style.opacity = "0";
 };
