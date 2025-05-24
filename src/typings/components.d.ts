@@ -8,13 +8,17 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    HomeDashBoard: typeof import('./../components/home/HomeDashBoard.vue')['default']
-    HomeSideBar: typeof import('./../components/home/HomeSideBar.vue')['default']
+    CollapseSideBar: typeof import('../components/x-collapse/XCollapse.vue')['default']
+    HomeDashBoard: typeof import('../views/home/HomeDashBoard.vue')['default']
+    HomeSideBar: typeof import('../views/home/HomeSideBar.vue')['default']
     NCollapse: typeof import('naive-ui')['NCollapse']
     NCollapseItem: typeof import('naive-ui')['NCollapseItem']
     NDivider: typeof import('naive-ui')['NDivider']
     NIcon: typeof import('naive-ui')['NIcon']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SideBar: typeof import('./../components/SideBar.vue')['default']
+    XCollapse: typeof import('./../components/x-collapse/XCollapse.vue')['default']
+    XCollapseItem: typeof import('./../components/x-collapse/XCollapseItem.vue')['default']
   }
 }

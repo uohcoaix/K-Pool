@@ -12,6 +12,14 @@ createApp(App)
     .mount("#app");
 
 const appWindow = new Window('main');
+
+// 应用启动时进入全屏模式
+// window.addEventListener('DOMContentLoaded', () => {
+//     setTimeout(async () => {
+//         await appWindow.maximize();
+//     }, 100);
+// });
+
 document
     .getElementById('titlebar-minimize')
     ?.addEventListener('click', () => appWindow.minimize());

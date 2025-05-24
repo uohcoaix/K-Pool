@@ -8,15 +8,17 @@
     "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
-  },
-  "app": {
+  },  "app": {
     "windows": [
       {
         "title": "kpoll-desktop",
         "width": 1350,
         "height": 800,
         "resizable": true,
-        "decorations": false
+        "decorations": false,
+        "fullscreen": false,
+        "maximized": true,
+        "center": true
       }
     ],
     "security": {

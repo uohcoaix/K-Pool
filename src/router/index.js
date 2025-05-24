@@ -6,11 +6,10 @@ const routes = [
         path: '/',
         name: 'Root',
         redirect: '/home'
-    },
-    {
+    },    {
         path: '/home',
         name: 'Home',
-        component: () => import('@/views/Home.vue')
+        component: () => import('../views/Home.vue')
     },
     // 重定向：当用户访问未定义的路径时，重定向到首页
     {
